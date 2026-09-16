@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "I001-01",
+  "investigation": "I001",
+  "question": "Does a literature search with two search strings yield a higher share of relevant hits than a search with one?",
+  "hypothesis": "The combined search has a share of relevant hits at least 0.15 higher than the single search.",
+  "rival": "The combined search is no better: its share of relevant hits is equal to or lower than the single search.",
+  "measures": [
+    {"id": "m1", "description": "Share of relevant hits for the combined search minus share for the single search", "unit": "share"},
+    {"id": "m_single", "description": "Share of relevant hits, single search", "unit": "share"},
+    {"id": "m_combined", "description": "Share of relevant hits, combined search", "unit": "share"}
+  ],
+  "interpretation_rule": {
+    "measure": "m1",
+    "supports_hypothesis_if": {"op": ">=", "value": 0.15},
+    "supports_rival_if": {"op": "<=", "value": 0.0}
+  },
+  "exploratory": false,
+  "affects": [],
+  "inputs": ["inputs/hits.csv"],
+  "data_kind": "simulated",
+  "limitations": "Simulated data written for this template. Forty hits, two searches, relevance judged by nobody. The study shows the form of a frozen protocol, not a finding about literature search."
+}

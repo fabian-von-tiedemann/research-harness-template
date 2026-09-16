@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "I001-01",
+  "evaluated_at": "2026-09-16T10:03:17+00:00",
+  "measures": {
+    "m1": 0.3,
+    "m_single": 0.45,
+    "m_combined": 0.75
+  },
+  "outcome": "supports_hypothesis",
+  "rule": {
+    "measure": "m1",
+    "supports_hypothesis_if": {
+      "op": ">=",
+      "value": 0.15
+    },
+    "supports_rival_if": {
+      "op": "<=",
+      "value": 0.0
+    }
+  },
+  "data_kind": "simulated",
+  "limitations": "Simulated data written for this template. Forty hits, two searches, relevance judged by nobody. The study shows the form of a frozen protocol, not a finding about literature search.",
+  "note": "Computed by compute.py from the frozen copy of inputs/hits.csv.",
+  "manifest_sha256": "1c365331d55759b9797aec054a8e9b9816dabc146057a00682011e20fa32b07c",
+  "result_sha256": "96657683f36fa9c153329a718dd203cb54c526e021b5a8c35584ff738766e8d4"
+}

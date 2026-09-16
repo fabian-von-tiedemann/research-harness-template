@@ -1,0 +1,8 @@
+{
+  "measures": {
+    "m1": 0.3,
+    "m_single": 0.45,
+    "m_combined": 0.75
+  },
+  "note": "Computed by compute.py from the frozen copy of inputs/hits.csv."
+}
