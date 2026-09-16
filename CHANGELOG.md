@@ -4,6 +4,8 @@ All notable changes to this template are recorded here. The format follows [Keep
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-09-16
+
 ### Added
 
 - Knowledge register: `validate`, `index`, `context`, `impact`, `snapshot`. Sources are hashed excerpts; claims carry status, review status and `reconsider_if`; documents depend on claims.
@@ -11,3 +13,6 @@ All notable changes to this template are recorded here. The format follows [Keep
 - `demo` runs the example study end to end.
 - Method: ten ground rules and a five-step close-out check. Templates for investigation, study, source, claim and document. Red-team prompt with five lines of attack.
 - Example investigation I001 on simulated data, frozen and evaluated, with claim K001 in the register.
+
+[Unreleased]: https://github.com/fabian-von-tiedemann/research-harness-template/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/fabian-von-tiedemann/research-harness-template/releases/tag/v0.1.0
