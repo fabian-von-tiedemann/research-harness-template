@@ -9,6 +9,7 @@ All notable changes to this template are recorded here. The format follows [Keep
 - `python3 -m harness check [--staged]`: the repo's own rules. Versions in `harness/__init__.py`, `CHANGELOG.md` and `CITATION.cff` agree; `[Unreleased]` exists; ten ground rules; no em-dashes; README links resolve; every investigation is indexed; skills have frontmatter. With `--staged`: no change or deletion under `frozen/`, and no rule, template or harness change without a `CHANGELOG.md` line.
 - `.githooks/pre-commit` running `check --staged`; enable with `git config core.hooksPath .githooks`.
 - GitHub Actions workflow running `check`, `validate`, `demo` and the tests on Python 3.10 and 3.13.
+- README badges for CI, release, licence and "Use this template". Repository topics and Discussions on GitHub.
 
 ## [0.1.0] - 2026-09-16
 

@@ -1,5 +1,10 @@
 # research-harness-template
 
+[![check](https://github.com/fabian-von-tiedemann/research-harness-template/actions/workflows/check.yml/badge.svg)](https://github.com/fabian-von-tiedemann/research-harness-template/actions/workflows/check.yml)
+[![release](https://img.shields.io/github/v/release/fabian-von-tiedemann/research-harness-template)](https://github.com/fabian-von-tiedemann/research-harness-template/releases)
+[![licence: MIT + CC BY 4.0](https://img.shields.io/badge/licence-MIT%20%2B%20CC%20BY%204.0-blue)](LICENSE)
+[![Use this template](https://img.shields.io/badge/use%20this-template-2ea44f)](https://github.com/fabian-von-tiedemann/research-harness-template/generate)
+
 A research harness for agent-assisted, pre-registered work. It carries a method, not a subject: investigations with a competing hypothesis, studies whose analysis plan is frozen and committed before data, a knowledge register where every claim points at the hashed excerpt it rests on, a decision log, and rules any coding agent reads before it does anything.
 
 Built for doctoral work first. The ambition is a template more researchers adopt and improve. Everything you find lacking is something to send back; see [Improving the template](#improving-the-template).
