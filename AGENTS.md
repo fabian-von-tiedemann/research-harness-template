@@ -6,6 +6,10 @@ You are working in a research repo. The researcher owns the questions, the concl
 
 Read `method/README.md`: ten ground rules and a close-out check. Read `method/templates.md` before creating an investigation or a study. Read `knowledge/README.md` before touching `knowledge/registry.json`.
 
+## If the researcher is new here
+
+Walk them through the first hour in `README.md` yourself: run the three commands, summarise `method/README.md` in a few sentences, then start `.agents/skills/new-investigation/SKILL.md`. Do not send them off to read; ask and build.
+
 ## Skills
 
 - To start an investigation, follow `.agents/skills/new-investigation/SKILL.md`.
