@@ -103,4 +103,4 @@ Code (`harness/`, `tests/`, scripts): MIT, see `LICENSE`. Text (method, template
 
 ## Origin
 
-The form comes from [framtidens-arbetssatt](https://github.com/digitalist-se/framtidens-arbetssatt), a research repo on future ways of working, where the register validator, the decision log and the close-out check were extracted from seven domain runs. The subject content stayed there.
+The form comes from `framtidens-arbetssatt`, a private research repo at Digitalist on future ways of working, where the register validator, the decision log and the close-out check were extracted from seven domain runs. The subject content stayed there.
