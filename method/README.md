@@ -23,7 +23,7 @@ An investigation is finished when the documentation reflects the decisions it to
 
 1. **Decisions.** Every decision that changed the repo's direction, method, scope or what leaves the repo goes into `DECISIONS.md`: date, what, why, which files. The content of the investigation stays in its own files.
 2. **Carrier documents.** Each decision stands in the file that carries the rule, not only in the log. Rule changes also get a `CHANGELOG.md` line.
-3. **Harness.** `python3 -m harness validate`, then `python3 -m harness index > knowledge/INDEX.md`, then `python3 -m unittest discover -s tests`. All must pass.
+3. **Harness.** `python3 -m harness check`, `python3 -m harness validate`, `python3 -m harness index > knowledge/INDEX.md`, `python3 -m unittest discover -s tests`. All must pass.
 4. **Investigation index.** The row in `investigations/README.md` matches the investigation README: status, outcome.
 5. **Feedback.** Did the method, a template or the harness get in the way? If so, file it upstream: `CONTRIBUTING.md`.
 

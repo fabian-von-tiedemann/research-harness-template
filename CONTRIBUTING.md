@@ -19,7 +19,7 @@ This template gets better only through use. If it got in your way, that is the m
 
 1. Open an issue on `fabian-von-tiedemann/research-harness-template` using the **Method gap** or **Template improvement** template.
 2. The `close-out` skill asks the feedback question at the end of every investigation and drafts the issue for you. You read it before it is filed.
-3. For a fix: fork, branch, `python3 -m unittest discover -s tests`, pull request. Say which rule or command the change affects.
+3. For a fix: fork, branch, `git config core.hooksPath .githooks`, make the change, pull request. The hook and CI run `python3 -m harness check`, which insists on a `CHANGELOG.md` line for any rule, template or harness change and refuses edits under `frozen/`.
 
 ## Licence of contributions
 

@@ -13,6 +13,7 @@ You run the five checks in `method/README.md`, section "Close-out check", in ord
 2. **Carrier documents.** For each decision, open the file that carries the rule (`method/README.md`, `method/templates.md`, `knowledge/README.md`, a skill) and confirm the change is there. If a rule, template or format changed, confirm there is a line under `[Unreleased]` in `CHANGELOG.md`. Fix what is missing.
 3. **Harness.** Run, in order:
    ```sh
+   python3 -m harness check
    python3 -m harness validate
    python3 -m harness index > knowledge/INDEX.md
    python3 -m unittest discover -s tests

@@ -15,7 +15,7 @@ Built for doctoral work first. The ambition is a template more researchers adopt
 
 ## First hour
 
-1. Click **Use this template** on GitHub, name your repo, clone it.
+1. Click **Use this template** on GitHub, name your repo, clone it. Run `git config core.hooksPath .githooks` once; the pre-commit hook then refuses commits that touch a frozen study or change a rule without a changelog line.
 2. Check the harness runs:
    ```sh
    python3 -m harness validate
@@ -61,8 +61,9 @@ Claude Code, Codex, OpenCode and Pi. All read `AGENTS.md` (Claude Code through `
 | `method/` | Ground rules, close-out check, templates, red-team prompt. |
 | `investigations/` | One directory per question. Studies inside, each with `protocol.json`, `inputs/`, `frozen/`. |
 | `knowledge/` | Register, hashed snapshots, generated index, how-to. |
-| `harness/` | `registry.py` (validate, index, context, impact, snapshot) and `study.py` (create, evaluate, report). `python3 -m harness --help`. |
+| `harness/` | `registry.py` (validate, index, context, impact, snapshot), `study.py` (create, evaluate, report), `check.py` (the repo's own rules). `python3 -m harness --help`. |
 | `tests/` | `python3 -m unittest discover -s tests`. |
+| `.githooks/`, `.github/workflows/` | Pre-commit hook and CI running `check`, `validate`, `demo` and the tests. |
 | `runs/local/` | Scratch output from `demo`. Gitignored. |
 | `.agents/skills/` | `new-investigation`, `close-out`. |
 | `DECISIONS.md` | Decision log. |
@@ -81,6 +82,7 @@ python3 -m harness create <study>/protocol.json --out <study>/frozen
 python3 -m harness evaluate <study>/frozen --write
 python3 -m harness report <study>/frozen --write
 python3 -m harness demo
+python3 -m harness check --staged                 # the repo's own checks; runs as pre-commit hook and in CI
 ```
 
 Exit codes: 0 done, 2 invalid input or contract, 3 interrupted. A negative or undecided study outcome is exit 0; it is a result, not an error.

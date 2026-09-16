@@ -7,6 +7,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+from .check import check, check_staged
 from .common import ContractError, atomic_json
 from .registry import build_index, context, impact, snapshot, validate_registry
 from .study import create, evaluate, report
@@ -41,11 +42,17 @@ def main(argv=None):
     p.add_argument("--write", action="store_true", help="Save report.md in the frozen directory")
     p = sub.add_parser("demo", help="Run the example study end to end in a scratch directory")
     p.add_argument("--out", type=Path, default=None)
+    p = sub.add_parser("check", help="Check the repo itself: versions, changelog, rules, links, frozen directories")
+    p.add_argument("--staged", action="store_true", help="Also check what is staged for commit; used by the pre-commit hook")
     args = parser.parse_args(argv)
     try:
         if args.command == "validate":
             errors = validate_registry(ROOT)
             emit({"valid": not errors, "errors": errors})
+            return 2 if errors else 0
+        if args.command == "check":
+            errors = check(ROOT) + (check_staged(ROOT) if args.staged else [])
+            emit({"ok": not errors, "errors": errors})
             return 2 if errors else 0
         if args.command == "index":
             print(build_index(ROOT), end="")

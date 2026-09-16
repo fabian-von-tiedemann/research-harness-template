@@ -1,0 +1,19 @@
+name: check
+on:
+  push:
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python3 -m harness check
+      - run: python3 -m harness validate
+      - run: python3 -m harness demo
+      - run: python3 -m unittest discover -s tests

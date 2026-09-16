@@ -22,3 +22,6 @@ Landed in: `LICENSE`, `LICENSE-CONTENT`, `README.md`.
 
 **5. Feedback goes upstream through issues, and the close-out check asks for it.** The template improves from use only if the loop runs without anyone remembering it.
 Landed in: `CONTRIBUTING.md`, `.github/ISSUE_TEMPLATE/`, `method/README.md` close-out step 5, `.agents/skills/close-out/`.
+
+**6. The repo checks itself.** `python3 -m harness check --staged` runs as a pre-commit hook and in CI. Two rules it enforces cannot be left to memory: nothing under `frozen/` changes after the fact, and no rule, template or harness change lands without a changelog line. Added after the first release, when the owner asked for the rules to live in the repo rather than in a chat.
+Landed in: `harness/check.py`, `.githooks/pre-commit`, `.github/workflows/check.yml`, `AGENTS.md`, `method/README.md` close-out step 3, `CONTRIBUTING.md`, `README.md`.

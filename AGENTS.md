@@ -27,6 +27,10 @@ Codex discovers these as `$new-investigation` and `$close-out`. Other agents ope
 - Every claim you add points at a preserved excerpt and has a concrete `reconsider_if`.
 - When a rule, template or register convention changes, write it into `DECISIONS.md`, `CHANGELOG.md` and the file that carries the rule, in the same commit.
 
+## Changing the repo itself
+
+Before every commit, `python3 -m harness check --staged` must pass. It refuses a commit that changes or deletes anything under `frozen/`, and a commit that changes `method/`, `.agents/`, `AGENTS.md`, `harness/study.py` or `harness/registry.py` without a line in `CHANGELOG.md`. Enable it as a hook once per clone: `git config core.hooksPath .githooks`. It also runs in GitHub Actions on every push. Never commit with `--no-verify` unless the researcher asked and the commit message says why.
+
 ## Language
 
 Write in the language the researcher writes in. Keep file names, JSON keys and commands in English so the harness and templates keep working.
