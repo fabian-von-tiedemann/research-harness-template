@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this template, please cite it."
+title: "research-harness-template"
+type: software
+authors:
+  - family-names: "von Tiedemann"
+    given-names: "Fabian"
+version: 0.1.0
+date-released: 2026-09-16
+repository-code: "https://github.com/fabian-von-tiedemann/research-harness-template"
+license: MIT
+abstract: "A field-neutral research harness for agent-assisted, pre-registered work: frozen study protocols, a hashed knowledge register, a decision log and agent rules."
