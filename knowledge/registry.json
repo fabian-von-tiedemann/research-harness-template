@@ -1,6 +1,47 @@
 {
   "schema_version": 1,
-  "sources": [],
-  "claims": [],
-  "documents": []
+  "sources": [
+    {
+      "id": "S001",
+      "family": "S001",
+      "version": "2026-09-16-v1",
+      "snapshot": "knowledge/snapshots/d8d483f386697878a74d5b122bdebe0a3c61eb105be5b50cfd7e1652414c60f7.txt",
+      "sha256": "d8d483f386697878a74d5b122bdebe0a3c61eb105be5b50cfd7e1652414c60f7",
+      "origin": "investigations/001-example/study-01/frozen/inputs/hits.csv",
+      "anchor": "L1-L41",
+      "kind": "dataset",
+      "access": "Simulated example data written for this template; not collected from any real search. May be quoted freely.",
+      "depends_on": []
+    }
+  ],
+  "claims": [
+    {
+      "id": "K001",
+      "statement": "In the example dataset, the combined search yields a 0.30 higher share of relevant hits than the single search.",
+      "type": "derivation",
+      "status": "provisional",
+      "scope": "Simulated data with 40 hits. Shows the form of a knowledge entry, not a finding about literature search.",
+      "reconsider_if": "The dataset is replaced by primary data, or the measure definition in study I001-01 changes.",
+      "depends_on": [],
+      "evidence": [
+        {
+          "source": "S001",
+          "anchor": "L1-L41",
+          "relation": "supports",
+          "reading": "Rows with search_id=combined have 15 of 20 relevant; rows with search_id=single have 9 of 20. Evaluated in study-01/frozen/evaluation.json."
+        }
+      ],
+      "history": [
+        {"date": "2026-09-16", "status": "provisional", "reason": "Derived from study I001-01 on simulated data."}
+      ],
+      "version": 1,
+      "review_status": "unreviewed",
+      "review_history": [
+        {"date": "2026-09-16", "status": "unreviewed", "reason": "Example entry; nobody has reviewed it and nobody needs to."}
+      ]
+    }
+  ],
+  "documents": [
+    {"id": "DOC-example", "path": "investigations/001-example/README.md", "depends_on": ["K001"]}
+  ]
 }
